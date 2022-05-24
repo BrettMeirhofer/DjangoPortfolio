@@ -4,11 +4,21 @@
     <meta charset="UTF-8">
 </head>
 <body>
-    <p>Welcome to Brett Meirhofer's Portfolio</p>
-    <h3>About Me</h3>
-    <p></p>
-    <div id="projects">
-
+<p>Welcome to Brett Meirhofer's Portfolio</p>
+<h3>About Me</h3>
+<form action="/Sensors">
+    <input type="submit" value="View GreenhouseSite"/>
+</form>
+<p></p>
+<div id="projects">
+    {% for project in projects %}
+    <div>
+        <h1>project.project_name</h1>
+        <form action="https://google.com">
+            <input type="submit" value="Learn More"/>
+        </form>
     </div>
+    {% endfor %}
+</div>
 </body>
 </html>
