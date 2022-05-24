@@ -1,0 +1,57 @@
+{% extends "portfolio_site.html" %}
+{% load i18n %}
+{% load static %}
+
+
+{% block extrabody %}
+<h1>{{project.project_name}}</h1>
+<h2>Start Date {{project.start_date.date}}</h2>
+<h2>Description</h2>
+<p>{{project.project_desc}}</p>
+
+<h2>Features</h2>
+<ul>
+    {% for feature in features %}
+    <li>
+        {{feature.feature_name}}
+    </li>
+    {% endfor %}
+</ul>
+
+<h2>Planned Features</h2>
+<ul>
+    {% for feature in pfeatures %}
+    <li>
+        {{feature.feature_name}}
+    </li>
+    {% endfor %}
+</ul>
+
+<h2>Skills</h2>
+<ul>
+    {% for skill in skills %}
+    <li>
+        {{skill.skill_name}}
+    </li>
+    {% endfor %}
+</ul>
+
+<h2>Links</h2>
+{% for link in links %}
+<form action="{{link.link}}">
+    <input type="submit" value="{{link.link_name}}"/>
+</form>
+{% endfor %}
+
+<h2>Images</h2>
+{% for image in images %}
+<div class="gallerydiv">
+    <p class="centertext">{{image.image_name}}</p>
+    <a href="{{image.image.url}}">
+        <img src="{{image.thumb.url}}">
+    </a>
+</div>
+{% endfor %}
+
+
+{% endblock %}

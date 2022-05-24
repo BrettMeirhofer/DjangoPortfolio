@@ -1,0 +1,175 @@
+h2 {
+    display: inline;
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0px 320px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #282d3e;
+}
+
+@media only screen and (min-width: 1200px) {
+  .navbar {
+    margin: 0px 320px;
+  }
+
+  .container {
+    width: 1200px;
+    min-height: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 200px;
+    margin-top: 0px;
+    padding: 50px;
+  }
+}
+
+
+
+.navcontainer {
+    background-color: #282d3e;
+}
+
+.navlink {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navli {
+    float: left;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+
+.navlink:hover:not(.active) {
+  background-color: #111;
+}
+
+.gallerydiv {
+    display: inline-block;
+}
+
+.imagetitle {
+    text-align: center;
+}
+
+.container {
+    background: #D3D3D3;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.background {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.center {
+    margin: auto;
+    text-align: center;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    margin:auto;
+}
+
+td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
+    background-color: #005000;
+    color: white;
+    cursor: pointer;
+}
+
+tr:nth-child(odd) {
+    background-color: white;
+}
+
+body {
+    margin: 0%;
+}
+
+.canvas_graph{
+    margin: auto;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+hr {
+    height: 1px;
+    background-color: Gray;
+    margin: 20px 30%;
+    border-style: none;
+}
+
+input {
+  background-color: #2b345a; /* Green */
+  color: white;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  margin: 5px;
+  width: 180px
+}
+
+input:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
+  color: white;
+}
+
+.project {
+  display: inline-block;
+  margin: 25px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: black;
+  vertical-align: top;
+  padding: 10px;
+  overflow: hidden;
+}

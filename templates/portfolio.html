@@ -1,0 +1,35 @@
+{% extends "portfolio_site.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block extrabody %}
+<img src="{{portfolio.profile_image}}">
+<h1>{{portfolio.person_name}}'s Portfolio</h1>
+<h2>About Me</h2>
+<p>{{portfolio.about_text}}</p>
+
+
+<b>Email: {{portfolio.email}}</b><br><br>
+<b>Phone Number: {{portfolio.phone}}</b><br><br>
+
+
+<h2>Links</h2>
+{% for link in links %}
+<form action="{{link.link}}">
+    <input type="submit" value="{{link.link_name}}"/>
+</form>
+{% endfor %}
+<br>
+
+<h2>Projects</h2>
+<div id="projects">
+    {% for project in projects %}
+    <div class="project">
+        <img src="{{project.thumb}}">
+        <form action="/project/{{project.id}}">
+            <input type="submit" value="{{project.project_name}}"/>
+        </form>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
