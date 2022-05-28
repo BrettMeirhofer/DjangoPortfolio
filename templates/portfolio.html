@@ -26,7 +26,7 @@
     {% for project in projects %}
     <div class="project">
         <img src="{{project.thumb}}">
-        <form action="/project/{{project.id}}">
+        <form class="center" action="/project/{{project.id}}">
             <input type="submit" value="{{project.project_name}}"/>
         </form>
     </div>

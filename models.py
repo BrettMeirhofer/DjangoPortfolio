@@ -7,6 +7,7 @@ from io import BytesIO
 from django.core.files.base import ContentFile
 
 
+# Represents a user that has a portfolio
 class Portfolio(models.Model):
     person_name = models.CharField(max_length=40)
     about_text = models.TextField()
@@ -15,12 +16,18 @@ class Portfolio(models.Model):
     email = models.EmailField(blank=True, null=True)
     phone = models.CharField(max_length=20, blank=True, null=True)
 
+    def __str__(self):
+        return self.person_name
+
 
 # Represents an external link for a portfolio
 class PortfolioLink(models.Model):
     portfolio = models.ForeignKey(Portfolio, on_delete=models.CASCADE)
     link_name = models.CharField(max_length=50)
     link = models.URLField()
+
+    def __str__(self):
+        return self.link_name
 
 
 # Represents a skill used in one or more projects
@@ -105,3 +112,6 @@ class ProjectLink(models.Model):
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
     link_name = models.CharField(max_length=50)
     link = models.URLField()
+
+    def __str__(self):
+        return self.link_name

@@ -5,7 +5,6 @@
 
 {% block extrabody %}
 <h1>{{project.project_name}}</h1>
-<h2>Start Date {{project.start_date.date}}</h2>
 <h2>Description</h2>
 <p>{{project.project_desc}}</p>
 
@@ -28,6 +27,7 @@
 </ul>
 
 <h2>Skills</h2>
+<br>
 <ul>
     {% for skill in skills %}
     <li>
@@ -37,16 +37,19 @@
 </ul>
 
 <h2>Links</h2>
+<br>
 {% for link in links %}
 <form action="{{link.link}}">
     <input type="submit" value="{{link.link_name}}"/>
 </form>
 {% endfor %}
 
+
 <h2>Images</h2>
+<br>
 {% for image in images %}
 <div class="gallerydiv">
-    <p class="centertext">{{image.image_name}}</p>
+    <p class="center">{{image.image_name}}</p>
     <a href="{{image.image.url}}">
         <img src="{{image.thumb.url}}">
     </a>
