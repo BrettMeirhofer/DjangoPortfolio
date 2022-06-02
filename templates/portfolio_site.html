@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="{% static 'css/base_site.css' %}">
     {% endblock %}
 </head>
-<body class="background" style="background-image: url('{{background_image.thumb.url}}');">
+
+{% block body %}
+<body class="background" style="background-image: url('{{portfolio.background_image.url}}');">
     <div class="navcontainer">
         <ul class="navbar">
             <li class="navli"><a class="navlink" href="{% url 'portfolio'%}">Portfolio</a></li>
@@ -21,4 +23,5 @@
         {% endblock %}
     </div>
 </body>
+{% endblock %}
 </html>

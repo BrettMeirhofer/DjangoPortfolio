@@ -4,15 +4,24 @@ h2 {
 
 .navbar {
     list-style-type: none;
-    margin: 0px 320px;
     padding: 0;
+    margin: auto;
     overflow: hidden;
     background-color: #282d3e;
 }
 
+.navli {
+    float: none;
+}
+
 @media only screen and (min-width: 1200px) {
+  .project {
+  display: block;
+  }
+
+
   .navbar {
-    margin: 0px 320px;
+    width: 1300px;
   }
 
   .container {
@@ -24,6 +33,11 @@ h2 {
     margin-top: 0px;
     padding: 50px;
   }
+
+    .navli {
+    float: left;
+}
+
 }
 
 
@@ -40,9 +54,7 @@ h2 {
     text-decoration: none;
 }
 
-.navli {
-    float: left;
-}
+
 
 .active {
   background-color: #04AA6D;
@@ -64,6 +76,7 @@ h2 {
     background: #D3D3D3;
     padding-bottom: 50px;
     padding-top: 50px;
+    text-align:center;
 }
 
 .background {
@@ -155,7 +168,7 @@ input {
   font-size: 16px;
   border-radius: 5px;
   margin: 5px;
-  width: 200px
+  width: 250px
 }
 
 input:hover {
@@ -172,4 +185,5 @@ input:hover {
   vertical-align: top;
   padding: 10px;
   overflow: hidden;
+
 }
