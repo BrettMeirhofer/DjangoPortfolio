@@ -168,7 +168,7 @@ input {
   font-size: 16px;
   border-radius: 5px;
   margin: 5px;
-  width: 250px
+  width: 300px
 }
 
 input:hover {
@@ -186,4 +186,14 @@ input:hover {
   padding: 10px;
   overflow: hidden;
 
+}
+
+.thumb {
+    width: 160px;
+    height: 80px;
+}
+
+.profileimage {
+    width: 250px;
+    height: 250px;
 }
