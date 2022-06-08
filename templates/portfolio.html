@@ -3,7 +3,9 @@
 {% load static %}
 
 {% block extrabody %}
-<img class="profileimage" src="{{portfolio.profile_image}}">
+{% if not profile.profile_image == None %}
+    <img class="profileimage" src="{{portfolio.profile_image}}">
+{% endif %}
 <h1>{{portfolio.person_name}}'s Portfolio</h1>
 <h2>About Me</h2>
 <p>{{portfolio.about_text}}</p>
