@@ -40,6 +40,17 @@ h2 {
 
 }
 
+@media only screen and (max-width: 1200px) {
+    .container {
+    text-align:center;
+}
+}
+
+.container {
+    background: #D3D3D3;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
 
 
 .navcontainer {
@@ -72,12 +83,7 @@ h2 {
     text-align: center;
 }
 
-.container {
-    background: #D3D3D3;
-    padding-bottom: 50px;
-    padding-top: 50px;
-    text-align:center;
-}
+
 
 .background {
     background-position: center;
