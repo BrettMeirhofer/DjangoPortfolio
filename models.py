@@ -76,7 +76,7 @@ class ProjectImage(models.Model):
         return mark_safe('<img src="/%s" width="150" height="150" />' % (self.image))
 
     def make_thumbnail(self):
-        thumb_size = 160, 120
+        thumb_size = 160, 160
         image = Image.open(self.image)
         image.thumbnail(thumb_size, Image.ANTIALIAS)
 
