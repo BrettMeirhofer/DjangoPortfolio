@@ -7,6 +7,14 @@ from io import BytesIO
 from django.core.files.base import ContentFile
 
 
+# Represents a skill used in one or more projects
+class Category(models.Model):
+    category_name = models.CharField(max_length=40)
+
+    def __str__(self):
+        return self.category_name
+
+
 # Represents a user that has a portfolio
 class Portfolio(models.Model):
     person_name = models.CharField(max_length=40)
@@ -15,6 +23,7 @@ class Portfolio(models.Model):
     background_image = models.ImageField(upload_to='images/portfolio/thumbs/', blank=True, null=True)
     email = models.EmailField(blank=True, null=True)
     phone = models.CharField(max_length=20, blank=True, null=True)
+    default_category = models.ForeignKey(Category, on_delete=models.CASCADE, blank=True, null=True)
 
     def __str__(self):
         return self.person_name
@@ -36,14 +45,6 @@ class Skill(models.Model):
 
     def __str__(self):
         return self.skill_name
-
-
-# Represents a skill used in one or more projects
-class Category(models.Model):
-    category_name = models.CharField(max_length=40)
-
-    def __str__(self):
-        return self.category_name
 
 
 # Represents a project on the portfolio
