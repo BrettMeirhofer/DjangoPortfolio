@@ -38,6 +38,14 @@ class Skill(models.Model):
         return self.skill_name
 
 
+# Represents a skill used in one or more projects
+class Category(models.Model):
+    category_name = models.CharField(max_length=40)
+
+    def __str__(self):
+        return self.category_name
+
+
 # Represents a project on the portfolio
 class Project(models.Model):
     project_name = models.CharField(max_length=40)
@@ -46,6 +54,7 @@ class Project(models.Model):
     start_date = models.DateTimeField(blank=True, null=True)
     end_date = models.DateTimeField(blank=True, null=True)
     thumb = models.ImageField(upload_to='images/portfolio/thumbs/', blank=True, null=True)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, blank=True, null=True)
 
     def __str__(self):
         return self.project_name

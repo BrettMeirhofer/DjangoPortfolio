@@ -36,6 +36,11 @@ class SkillAdmin(admin.ModelAdmin):
     list_display = ["skill_name"]
 
 
+@admin.register(models.Category)
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ["category_name"]
+
+
 @admin.register(models.ProjectLink)
 class ProjectLinkAdmin(admin.ModelAdmin):
     list_filter = ["project"]
