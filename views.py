@@ -8,10 +8,10 @@ def main_page(request):
     portfolio = models.Portfolio.objects.get(person_name="Brett Meirhofer")
     target_id = portfolio.id
     links = models.PortfolioLink.objects.filter(portfolio__pk=target_id)
-    projects = models.Project.objects.filter(category__pk=request.GET.get('cat', portfolio.default_category))
+    projects = models.Project.objects.filter(category__pk=request.GET.get('cat', portfolio.default_category.pk))
     return render(request, "portfolio.html", {'portfolio': portfolio, 'projects': projects, 'links': links})
 
-
+:
 def view_project(request, target_id):
     portfolio = models.Portfolio.objects.get(person_name="Brett Meirhofer")
     project = models.Project.objects.get(id=target_id)
