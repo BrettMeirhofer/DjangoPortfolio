@@ -13,35 +13,29 @@
 {% block extrabody %}
 <h1>{{project.project_name}}</h1>
 <h2>Description</h2>
-<p>{{project.project_desc}}</p>
+<p>{{ project.project_desc|linebreaks }}</p>
 
 <h2>Features</h2>
-<ul>
+<div>
     {% for feature in features %}
-    <li>
-        {{feature.feature_name}}
-    </li>
+    <div class="featurediv"> {{feature.feature_name}}</div>
     {% endfor %}
-</ul>
+</div>
 
 <h2>Planned Features</h2>
-<ul>
+<div>
     {% for feature in pfeatures %}
-    <li>
-        {{feature.feature_name}}
-    </li>
+        <div class="featurediv"> {{feature.feature_name}}</div>
     {% endfor %}
-</ul>
+</div>
 
 <h2>Skills</h2>
 <br>
-<ul>
+<div>
     {% for skill in skills %}
-    <li>
-        {{skill.skill_name}}
-    </li>
+        <div class="featurediv"> {{}}</div>
     {% endfor %}
-</ul>
+</div>
 
 <h2>Links</h2>
 <br>

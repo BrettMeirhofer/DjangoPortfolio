@@ -203,3 +203,19 @@ input:hover {
     width: 250px;
     height: 250px;
 }
+
+
+
+.featurediv {
+  background-color: #282d3e;
+  border: none;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+}
