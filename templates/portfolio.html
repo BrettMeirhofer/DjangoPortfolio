@@ -23,16 +23,18 @@
 {% endfor %}
 <br>
 
-<div class="dropdown">
-  <button class="dropbtn">Categories</button>
-  <div class="dropdown-content">
-      {% for category in categories%}
-        <a href="{% url 'portfolio'%}?cat={category.id}">{{category.category_name}}</a>
-      {% endfor %}
-  </div>
-</div>
-
 <h2>Projects</h2>
+<div>
+    <div class="dropdown">
+      <button class="dropbtn">Categories</button>
+      <div class="dropdown-content">
+          {% for category in categories%}
+            <a href="{% url 'portfolio'%}?cat={{category.id}}">{{category.category_name}}</a>
+          {% endfor %}
+      </div>
+    </div>
+</div>
+<br>
 <div class="center" id="projects">
     {% for project in projects %}
     <div class="project">
