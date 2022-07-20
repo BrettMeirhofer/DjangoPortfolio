@@ -234,10 +234,7 @@ input:hover {
 }
 
 .dropdown {
-  position: relative;
-  display: inline-block;
-  margin-right: 0;
-  margin-left: auto;
+  margin-top:10px;
 }
 
 .dropdown-content {
