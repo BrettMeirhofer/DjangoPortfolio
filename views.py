@@ -9,7 +9,8 @@ def main_page(request):
     target_id = portfolio.id
     links = models.PortfolioLink.objects.filter(portfolio__pk=target_id)
     projects = models.Project.objects.filter(category__pk=request.GET.get('cat', portfolio.default_category.pk))
-    return render(request, "portfolio.html", {'portfolio': portfolio, 'projects': projects, 'links': links})
+    categories = models.Category.objects.all()
+    return render(request, "portfolio.html", {'portfolio': portfolio, 'projects': projects, 'links': links, 'categories': categories})
 
 
 def view_project(request, target_id):

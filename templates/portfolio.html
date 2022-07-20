@@ -23,6 +23,15 @@
 {% endfor %}
 <br>
 
+<div class="dropdown">
+  <button class="dropbtn">Categories</button>
+  <div class="dropdown-content">
+      {% for category in categories}
+        <a href="{% url 'portfolio'%}?cat={category.id}">{{category.category_name}}</a>
+      {% endfor %}
+  </div>
+</div>
+
 <h2>Projects</h2>
 <div class="center" id="projects">
     {% for project in projects %}
