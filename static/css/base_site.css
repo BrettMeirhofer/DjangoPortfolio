@@ -253,7 +253,7 @@ input:hover {
   display: block;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {background-color: #373f61}
 
 .dropdown:hover .dropdown-content {
   display: block;
