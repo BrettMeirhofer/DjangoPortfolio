@@ -8,7 +8,8 @@
 {% endif %}
 <h1>{{portfolio.person_name}}'s Portfolio</h1>
 <h2>About Me</h2>
-<p>{{portfolio.about_text}}</p>
+<p>{{ portfolio.about_text|linebreaks }}</p>
+
 
 
 <b>Email: {{portfolio.email}}</b><br><br>
